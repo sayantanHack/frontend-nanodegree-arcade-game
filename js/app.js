@@ -63,6 +63,15 @@ player.prototype.handleInput = function(keyPress){
   }
 }
 
+var allEnemies = [];
+var enemyLocation = [63, 147, 230];
+
+enemyLocation.forEach(function (locationY){
+  enemy = new Enemy(0, locationY, 200);
+  allEnemies.push(enemy);
+});
+var player = new Player(202, 405);
+
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {
         37: 'left',
