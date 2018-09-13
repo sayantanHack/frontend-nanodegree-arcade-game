@@ -28,19 +28,20 @@ Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-// Now write your own player class
-// This class requires an update(), render() and
-// a handleInput() method.
+var player = function(x,y){
+    this.x = x;
+    this.y =y;
+    this.player = 'images/char-horn-girl.png';
+}
 
+player.prototype.update = function(dt) {
 
-// Now instantiate your objects.
-// Place all enemy objects in an array called allEnemies
-// Place the player object in a variable called player
+}
 
+player.prototype.render = function(){
+  ctx.drawImage(Resources.get(this.player), this.x, this.y);
+}
 
-
-// This listens for key presses and sends the keys to your
-// Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {
         37: 'left',
