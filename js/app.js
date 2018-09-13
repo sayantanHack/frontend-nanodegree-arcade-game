@@ -42,6 +42,27 @@ player.prototype.render = function(){
   ctx.drawImage(Resources.get(this.player), this.x, this.y);
 }
 
+player.prototype.handleInput = function(keyPress){
+  if(keyPress == 'left' && this.x > 0){
+    this.x -= 102;
+  }
+  if(keyPress == 'right' && this.x < 405){
+    this.x += 102;
+  }
+  if(keyPress == 'up' && this.y > 0){
+    this.x -= 83;
+  }
+  if(keyPress == 'down' && this.y < 405){
+    this.x += 83;
+  }
+  if(this.y < 0) {
+    setTimeout(funtion(){
+      player.x = 202;
+      player.y = 405;
+    }, 600);
+  }
+}
+
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {
         37: 'left',
