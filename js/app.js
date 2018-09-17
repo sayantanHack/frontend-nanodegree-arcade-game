@@ -113,7 +113,7 @@ class Player{
 
     checkGameOver(){
         if (this.life === 0){
-            alert('Ah Ho! You missed it');
+            alert('Ah Ho! You missed it.\n Keep trying');
             this.game = false;
             this.gameReset();
 		}
