@@ -22,12 +22,27 @@ var Engine = (function(global) {
         win = global.window,
         canvas = doc.createElement('canvas'),
         ctx = canvas.getContext('2d'),
-        lastTime;
-
+        lastTime,
+        updates = document.querySelector('.update'),
+        Score = document.getElementById('score'),
+		Life = document.getElementById('life')
+		
     canvas.width = 505;
     canvas.height = 606;
     doc.body.appendChild(canvas);
-
+	doc.body.appendChild(Score);
+    doc.body.appendChild(Life);
+    Score.innerHTML = `<em><strong>Score:</strong></em> `
+    Life.innerHTML = `<em><strong>Life:</strong></em> `
+	Scoreupdate = doc.createTextNode(player.win);
+	Score.appendChild(Scoreupdate);
+	Lifeupdate = doc.createTextNode(player.life);
+    Life.appendChild(Lifeupdate);
+    canvas.width = 505;
+    canvas.height = 606;
+    doc.body.appendChild(updates);
+    doc.body.appendChild(canvas);
+    
     /* This function serves as the kickoff point for the game loop itself
      * and handles properly calling the update and render methods.
      */
@@ -46,7 +61,8 @@ var Engine = (function(global) {
          */
         update(dt);
         render();
-
+        Scoreupdate.nodeValue = player.win;
+		Lifeupdate.nodeValue = player.life;
         /* Set our lastTime variable which is used to determine the time delta
          * for the next time this function is called.
          */
@@ -173,7 +189,13 @@ var Engine = (function(global) {
         'images/water-block.png',
         'images/grass-block.png',
         'images/enemy-bug.png',
-        'images/char-boy.png'
+        'images/char-boy.png',
+        'images/Heart.png',
+        'images/Gem Blue.png',
+        'images/Gem Green.png',
+        'images/Gem Orange.png',
+        'images/Star.png',
+        'images/Key.png'
     ]);
     Resources.onReady(init);
 
