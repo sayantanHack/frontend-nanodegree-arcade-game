@@ -70,14 +70,14 @@ class Player{
     }
 
     scoreWin(){
-        this.win += 1;
+        this.win += 10;
         toggleModal();
         this.reset();
 
     }
 
     scoreLost(){
-        this.win -= 1;
+        this.win -= 5;
 	    this.life -= 1;
     }
 
