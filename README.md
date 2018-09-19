@@ -7,6 +7,9 @@ Students should use this [rubric](https://review.udacity.com/#!/projects/2696458
 The game is a kind of Frogger arcade game . There you have to cross the road & go to the water part, avoiding the cockroaches.
 The cockroaches are coming in random speedin one direction , you have to bypass those cockroaches & go to the opposite site.
 
+## How it looks like
+![arcade](https://user-images.githubusercontent.com/26269305/45746994-3b06a000-bc22-11e8-88d3-6db7703f825b.png)
+
 ## How to play 
 - Open index.html in your browser 
 - There the instructions are writen
